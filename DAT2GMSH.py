@@ -44,7 +44,7 @@ with open(datfile + '.dat','r')as aero:
 aero.close()
 
 """ this section created the spline"""
-spline = spline[int((linecnt/2)-3)::-1]
+spline[:int((linecnt/2)-2)] = reversed(spline[:int(linecnt/2)-2])
 splines ='Spline(1) ={'+(str(spline))+'}'
 splines = splines.replace('[','')
 splines = splines.replace(']','')
